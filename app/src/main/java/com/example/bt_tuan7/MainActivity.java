@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         reset();
-
+        System.out.println("abc");
         nWork = Integer.parseInt(editTextInput.getText().toString());
         progressBar.setMax(MAX_PROGRESS);
         isRunning = false;
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 isRunning = true;
 
                 for (int i = 0; i < nWork; ++i) {
-                    Thread.sleep(0);
+                    Thread.sleep(1);
 
                     accum += progressStep;
                     progress = (int) Math.round(1.0 * accum / nWork * MAX_PROGRESS);
